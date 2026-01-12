@@ -1,0 +1,29 @@
+{
+	"name": "web-environment",
+	"version": "1.0.0",
+	"description": "A web environment with common dependencies preinstalled.",
+	"author": "Hongjian Li",
+	"type": "module",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/HongjianLi/web-environment.git"
+	},
+	"license": "MIT",
+	"dependencies": {
+		"@fastify/autoload": "^5.10.0",
+		"@fastify/compress": "^7.0.3",
+		"@fastify/sensible": "^5.6.0",
+		"@fastify/static": "^7.0.4",
+		"fastify": "^4.29.1",
+		"fastify-cli": "^6.3.0",
+		"fastify-plugin": "^4.5.1",
+		"progress": "^2.0.3",
+		"puppeteer-core": "^23.11.1"
+	},
+	"main": "app.js",
+	"scripts": {
+		"test": "tap \"test/**/*.test.js\"",
+		"start": "fastify start -a 0.0.0.0 -p 12080 app.js > app.log 2>&1 < /dev/null &",
+		"dev": "fastify start -a 0.0.0.0 -p 12080 -w -l info -P app.js"
+	}
+}
