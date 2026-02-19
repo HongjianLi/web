@@ -10,7 +10,7 @@ export default async function (fastify, opts) {
 		global: true,
 	});
 	fastify.register(fastifyStatic, {
-		root: __dirname,
+		root: path.join(__dirname, 'apps'),
 	});
 
 	// Do not touch the following lines
