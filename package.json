@@ -24,6 +24,6 @@
 	"scripts": {
 		"test": "tap \"test/**/*.test.js\"",
 		"start": "fastify start -a 0.0.0.0 -p 12080 app.js > app.log 2>&1 < /dev/null &",
-		"dev": "fastify start -a 0.0.0.0 -p 12080 -w -l info -P app.js"
+		"dev": "fastify start -a 0.0.0.0 -p 12080 -l info -P app.js"
 	}
 }
