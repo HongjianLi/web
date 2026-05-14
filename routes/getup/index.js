@@ -4,7 +4,7 @@ export default async function (fastify, opts) {
 	fastify.post('/', async function (request, reply) {
 		const item = request.body;
 		const itemArr = await fs.readFile(path).then(JSON.parse).catch(() => []);
-		itemArr.push(item);
+		itemArr.unshift(item);
 		await fs.writeFile(path, JSON.stringify(itemArr, null, '	'));
 		return JSON.stringify(item);
 	})
