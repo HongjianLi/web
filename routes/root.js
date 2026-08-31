@@ -21,7 +21,7 @@ export default async function (fastify, opts) {
 				category = line.substring(22, line.length - 14);
 			} else if (line === '\t\t</item>') {
 				let matches;
-				if (![ '企业动态', '传统汽车', '电动汽车', '新能源汽车', '无人驾驶汽车', '汽车厂商', '摩托车', '车载配件', '车载系统', '服装鞋帽', '网友热议', '网络红人', '视点人物', '教育未来', '手机游戏', '电脑游戏', '主机游戏', '游戏主机', '电子竞技', '精彩影视', '电影动画', '生科医学', '生物世界', '奇趣探险', '个人洗护', '餐饮零食', '日常用品', '工程建筑', '苹果iPad', '键鼠' ].includes(category) && (['小米', '会员'].some(whiteWord => title.includes(whiteWord)) || !(matches = title.match(regexp)) || matches.some(m => parseFloat(m.substring(0, m.length - 1)) >= 100))) { // Match price >= 100元. m[m.length - 1] is the currenty symbol 元.
+				if (![ '企业动态', '传统汽车', '电动汽车', '新能源汽车', '无人驾驶汽车', '汽车厂商', '摩托车', '车载配件', '车载系统', '服装鞋帽', '网友热议', '网络红人', '视点人物', '教育未来', '手机游戏', '电脑游戏', '主机游戏', '游戏主机', '电子竞技', '精彩影视', '电影动画', '生科医学', '生物世界', '奇趣探险', '个人洗护', '餐饮零食', '日常用品', '工程建筑', '快递物流', '苹果iPad', '键鼠' ].includes(category) && (['小米', '会员'].some(whiteWord => title.includes(whiteWord)) || !(matches = title.match(regexp)) || matches.some(m => parseFloat(m.substring(0, m.length - 1)) >= 100))) { // Match price >= 100元. m[m.length - 1] is the currenty symbol 元.
 					items.push(...itemLines)
 				}
 				itemLines.length = 0
