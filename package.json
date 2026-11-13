@@ -13,12 +13,12 @@
 		"@fastify/autoload": "^6.5.1",
 		"@fastify/compress": "^9.3.0",
 		"@fastify/sensible": "^6.0.7",
-		"@fastify/static": "^10.1.10",
+		"@fastify/static": "^10.1.11",
 		"fastify": "^5.12.8",
 		"fastify-cli": "^8.0.3",
 		"fastify-plugin": "^5.1.0",
 		"progress": "^2.0.3",
-		"puppeteer-core": "^25.16.0"
+		"puppeteer-core": "^25.17.0"
 	},
 	"main": "app.js",
 	"scripts": {
